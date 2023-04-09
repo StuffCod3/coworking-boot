@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в аккаунт</title>
+
+    <link rel="stylesheet" th:href="@{/assets/css/signIn.css}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <section class="registration">
+        <div class="content">
+            <div class="left-block">
+                <div class="text">
+                    <h1>Добро пожаловать</h1>
+                    <p>Войдите в личный кабинет для доступа ко всем возможностям резидента пространства.</p>
+                </div>
+            </div>
+            <div class="right-block">
+                <div class="elements">
+                    <div class="text-over-form">
+                        <h1>Вход</h1>
+                        <p>Укажите Ваши данные для входа</p>
+                    </div>
+                    
+                    <div class="form-block-sign-in">
+                        <form class="sign-in" th:action="@{/login}" method="post">
+                            <input class="si_input" type="text" name="username" placeholder="Email"/>
+                            <input class="si_input" type="password" name="password" placeholder="Пароль"/>
+                            <input type="submit" class="btn_si" value="Войти"/>
+                        </form>
+
+                    </div>
+
+
+                    <a href="/sign_up" class="sign-up-page">Нет аккаунта</a>
+                    <a href="" class="recover-pass">Забыли пароль</a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>

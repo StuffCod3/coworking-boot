@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Переговорные комнаты | Коворкинг</title>
+
+    <link rel="stylesheet" href="/assets/css/meeting.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="text-header">
+                    <h1>Переговорные комнаты в коворкинге</h1>
+                    <p>Мы работаем в обычном режиме и ждем всех,кому важно провести встречи в комфортных условиях</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="rooms">
+        <div class="container">
+            <div class="rooms-content">
+                <div class="text-room">
+                    <h1>Переговорные комнаты</h1>
+                </div>
+                
+                <div class="cards-room">
+                    <div th:each="room : ${rooms}" class="card" >
+                        <img th:src="${room.img}" alt="">
+                        <h1 th:text="${room.title}" class="title">Ул. Вавилова, 19</h1>
+                        <p th:text="${room.description}"></p>
+                        <p th:text="${room.city} + ' ' + ${room.address}"></p>
+                        <p th:text="${room.price} + 'руб.'" class="price"> 999 руб/месяц</p>
+                        <button class="btn_booking">Забронировать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

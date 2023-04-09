@@ -1,0 +1,46 @@
+@import "./reset.css";
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #EDEDED;
+}
+
+.container{
+    max-width: 1160px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.navigation{
+    color: #04082C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.navigation h1{
+    font-size: 36px;
+    font-weight: 600;
+ }
+ 
+ .block-guest-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+ }
+
+ .block-form{
+    width: 600px;
+    height: 300px;
+    background-color: white;
+ }
+
+.block-form h1{
+    padding: 50px;
+}
+
+.data{
+    padding-left: 50px;
+}

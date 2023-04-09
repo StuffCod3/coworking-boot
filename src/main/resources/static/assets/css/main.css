@@ -1,0 +1,428 @@
+@import "./reset.css";
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+.container{
+    max-width: 1160px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.header{
+    background-size: cover;
+    min-height: 710px;
+    background-image: url(/assets/img/bg.png);
+}
+
+.btn-profile{
+    display: flex;
+    justify-content: right;
+    padding-top: 50px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.btn-profile:hover{
+    color: #a0a0a0;
+}
+
+.header-content{
+    padding-top: 205px;
+}
+
+.header-content p{
+    font-size: 64px;
+    color: white;
+    font-weight: 200;
+}
+
+.header-content h1{
+    font-size: 80px;
+    color: white;
+    font-weight: 500;
+}
+
+.btn_take_trial_day{
+    margin-top: 30px;
+    padding: 20px 45px;
+    background-color: #ffffff00;
+    border-radius: 50px;
+    color: white;
+    font-weight: 200;
+    font-size: 32px;
+    border: 1px solid #ffffff;
+}
+
+.btn_take_trial_day:hover{
+    background-color: #ffffff;
+    color: #000;
+    transition: .3s;
+}
+
+.btn_take_trial_day:not(:hover){
+    background-color: #ffffff00;
+    color: #ffffff;
+    transition: .3s;
+}
+
+.advantages{
+    padding: 160px 0;
+}
+
+.advantages-block{
+    display: flex;
+    width: 860px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 60px;
+}
+
+.advantage{
+    display: flex;
+    align-items: center;
+}
+
+.advantage:nth-child(4n){
+    padding-top: 32px;
+}
+
+.advantage:nth-child(5n){
+    padding-top: 32px;
+}
+
+
+.advantage p{
+    font-weight: 300;
+    font-size: 20;
+    width: 130px;
+}
+
+.fixed-place{
+    background-image: url(/assets/img/bg2.png);
+    height: 1250px;
+    background-size: cover;
+}
+
+.content-place{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-place h1{
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 48px;
+    padding-top: 75px;
+}
+
+.shield{
+    margin: 0 auto;
+    padding-top: 75px;
+}
+
+
+.shield h1{
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 40px;  
+    padding-top: 50px;
+}
+
+.shield p{
+    color: #ffffff;
+    font-weight: 200;
+    font-size: 40px;  
+    padding-top: 50px;
+}
+
+.description-place{
+    padding-top: 175px;
+}
+
+.description-place p{
+    color: #ffffff;
+    font-weight: 200;
+    font-size: 40px;  
+}
+
+.price-place{
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-place p{
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 200;
+}
+
+.price-place     h1{
+    color: #ffffff;
+    font-size: 64px;
+    font-weight: 500;
+}
+
+.week h1{
+    padding-top: 64px;
+}
+
+.month h1{
+    padding-top: 64px;
+}
+
+.week p{
+    padding-top: 0;
+}
+
+.month p{
+    padding-top: 0;
+}
+
+.loose-place{
+    background-image: url(/assets/img/bg3.png);
+    height: 1350px;
+    background-size: cover;
+}
+
+.last-visit p{
+    font-size: 24px;
+    font-weight: 500;
+    padding-top: 100px;
+}
+
+.content-booking{
+    margin: 160px 0;
+    text-align: center;
+}
+
+.content-booking p{
+    text-align: center;
+    width: 1200px;
+    font-weight: 200;
+    font-size: 32px;
+    color: #000;
+    padding-bottom: 75px;
+    margin: 0 auto;
+}
+
+.booking-btn{
+    padding: 20px 45px;
+    background-color: #ffffff00;
+    border-radius: 50px;
+    color: #252525;
+    font-weight: 200;
+    font-size: 32px;
+    border: 1px solid #252525;
+}
+
+.booking-btn:hover{
+    background-color: #252525;
+    color: #ffffff;
+    transition: .3s;
+}
+
+.booking-btn:not(:hover){
+    background-color: #ffffff00;
+    color: #252525;
+    transition: .3s;
+}
+
+.gallary{
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.images-gallary{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.second-description{
+    margin: 160px 0;
+}
+
+.content-sec-desc{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-sec-desc p{
+    text-align: center;
+    color: #000;
+    font-weight: 200;
+    font-size: 32px;
+}
+
+.content-sec-desc h1{
+    padding-top: 64px;
+    text-align: center;
+    color: #000;
+    font-weight: 300;
+    font-size: 32px;
+}
+
+.application{
+    background-image: url(/assets/img/bg4.png);
+    height: 665px;
+}
+
+.content-app h1{
+    text-align: center;
+    color: #ffffff;
+    font-size: 48px;
+    padding-top: 155px;
+}
+
+.content-app{
+    padding-bottom: 64px;
+}
+
+.form{
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.form-app{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.app_input{
+    background-color: #04082c7e;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 18px;
+    padding-right: 40px;
+    border-radius: 10px;
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.app_input:last-child{
+    margin-right: 0;
+}
+
+.btn_send_app{
+    margin-top: 40px;
+    padding: 20px 100px;
+    background-color: #ffffff00;
+    border-radius: 50px;
+    color: white;
+    font-weight: 200;
+    font-size: 32px;
+    border: 1px solid #ffffff;
+}
+
+.btn_send_app:hover{
+    background-color: #ffffff;
+    color: #000;
+    transition: .3s;
+}
+
+.btn_send_app:not(:hover){
+    background-color: #ffffff00;
+    color: #ffffff;
+    transition: .3s;
+}
+
+.content-team h1{
+    font-size: 64px;
+    color: #000;
+    font-weight: 300;
+    padding-bottom: 65px;
+}
+
+.team{
+    margin: 120px;
+}
+
+.content-team{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cards-team{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    padding-right: 100px;
+}
+
+.card h1{
+    padding-top: 14px;
+}
+
+.card:last-child{
+    padding-right: 0;
+}
+
+.card img{
+    width: 350px;
+    height: 350px;
+    border-radius: 60px;
+}
+
+.card h1{
+    font-size: 32px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.card p{
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.feedback{
+    height: 620px;
+    background-color: #2A2D4C;
+    margin: 0 auto;
+}
+
+.content-feedback{
+    padding-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.comment{
+    background-color: #ffffff;
+    width: 380px;
+    height: 400px;
+    border-radius: 10px;
+    margin-right: 80px;
+}
+
+.comment:last-child{
+    margin-right: 0;
+}
+
+.text-comment{
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 54px;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.profile-comment{
+    display: flex;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 24px;
+    align-items: center;
+}
+
+.profile-comment p{
+    padding-left: 16px;
+    font-size: 32px;
+    font-weight: 500;
+}
+

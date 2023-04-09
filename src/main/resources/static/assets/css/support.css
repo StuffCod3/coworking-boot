@@ -1,0 +1,89 @@
+@import "./reset.css";
+
+input{
+    display: block;
+}
+
+textarea{
+    display: block;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #EDEDED;
+}
+
+.container{
+    max-width: 1160px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.navigation{
+    color: #04082C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.navigation h1{
+    font-size: 36px;
+    font-weight: 600;
+ }
+
+ .block-sup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+ }
+
+ .content-sup{
+    display: flex;
+    justify-content: center;
+ }
+
+ .block-support{
+    width: 600px;
+    height: 800px;
+    background-color: white;
+ }
+
+.block-support h1{
+    padding: 25px;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.theme{
+    margin-top: 30px;
+    background-color: #EAEAEA;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 18px;
+    padding-right: 100px;
+    border-radius: 10px;
+    color: #000000;
+    margin-bottom: 50px;
+}
+
+.quation{
+    min-width: 400px;
+    min-height: 300px;
+    resize: none;
+    margin-bottom: 50px;
+    background-color: #EAEAEA;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.btn_send_1{
+    background-color: #04082C;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 10px;
+    color: #ffffff;
+}

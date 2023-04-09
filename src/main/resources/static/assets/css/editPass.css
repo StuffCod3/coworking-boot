@@ -1,0 +1,67 @@
+@import "./reset.css";
+
+input{
+    display: block;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #EDEDED;
+}
+
+.container{
+    max-width: 1160px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.navigation{
+    color: #04082C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.navigation h1{
+   font-size: 36px;
+   font-weight: 600;
+}
+
+.block-settings{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+ }
+
+ .block-elements-pass{
+    width: 1000px;
+    height: 600px;
+    background-color: white;
+ }
+
+ .block-elements-pass h1{
+    padding-top: 50px;
+    padding-left: 50px;
+    font-size: 24px;
+ }
+
+ .content-pass{
+    padding: 50px;
+ }
+
+ .edit{
+    display: block;
+ }
+
+.edit input{
+    margin-top: 30px;
+    background-color: #EAEAEA;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 18px;
+    padding-right: 200px;
+    border-radius: 10px;
+    color: #000000;
+}

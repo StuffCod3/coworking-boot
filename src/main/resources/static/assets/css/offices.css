@@ -1,0 +1,102 @@
+@import "./reset.css";
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+.container{
+    max-width: 1160px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.header{
+    height: 710px;
+    background-image: url("/assets/img/bg_meet.png");
+}
+
+.header-content{
+    height: 710px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-header{
+    text-align: center;
+    color: white;
+}
+
+.text-header h1{
+    font-size: 80px;
+    font-weight: 500;
+}
+
+
+.text-header p{
+    font-size: 24px;
+    font-weight: 500;
+    padding-top: 160px;
+}
+
+.rooms-content{
+    margin-top: 150px;
+}
+
+.cards-room{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card{
+    margin-bottom: 40px;
+}
+
+.text-room h1{
+    font-size: 64px;
+    font-weight: 500;
+    color: black;
+    padding-bottom: 150px;
+    text-align: center;
+}
+
+.card img{
+    height: 500px;
+    width: 450px;
+    border-radius: 10px;
+}
+
+.title{
+    font-size: 32px;
+    font-weight: 500;
+    padding-top: 24px;
+}
+
+.price{
+    font-size: 24px;
+    font-weight: 500;
+    padding-top: 25px;
+}
+
+.description{
+    padding-top: 16px;
+    padding-bottom: 25px;
+    width: 260px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.btn_booking{
+    background-color: rgb(236, 236, 236);
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.btn_booking{
+    background-color: rgb(236, 236, 236);
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль</title>
+    <link rel="stylesheet" href="/assets/css/profile.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="navigation">
+                <h1>Профиль</h1>
+                <form th:action="@{/logout}" method="post">
+                    <input class="sign-out-btn" type="submit" value="Выйти"/>
+                </form>
+<!--                <a href="/sign_in" class="sign-out-btn">Выйти</a>-->
+            </div>
+        </div>
+    </header>
+
+    <section class="block-profile">
+        <div class="container">
+            <div class="block-elements">
+                <div class="left-half">
+<!--                    <h1 class="name" th:inline="text"><span th:remove="tag" sec:authentication="name">thymeleaf</span></h1>-->
+                    <h1 class="name" sec:authentication="principal.name">jhj</h1>
+                    <div class="info-profile">
+                        <img src="" alt="" class="avatar">
+                        <div class="text-info">
+                            <p class="phone" sec:authentication="principal.phone">+7999999999</p>
+                            <p class="email" sec:authentication="principal.username">fafa@fdsfs.eu</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="right-half">
+                    <div class="elements">
+                        <div class="guests">
+                            <h1>Гости</h1>
+                            <a class="open-guests-btn" href="/profile/guest">Заказать пропуск для гостя</a>
+                        </div>
+
+                        <div class="settings">
+                            <h1>Настройки</h1>
+                            <a class="open-settings-btn" href="/profile/settings">Настройки профиля</a>
+                        </div>
+
+                        <div class="support">
+                            <h1>Поддержка</h1>
+                            <a class="open-support-btn" href="/support">Задать вопрос в техподдержке</a>
+                        </div>
+
+                        <div class="tarifs">
+                            <h1>Тарифы</h1>
+                            <a class="open-coffee-btn" href="/profile/tarifs">Кофе</a>
+                            <a class="open-coffee-btn" href="/profile/tarifs">Шкафчик</a>
+                            <a class="open-coffee-btn" href="/profile/tarifs">Аренда</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

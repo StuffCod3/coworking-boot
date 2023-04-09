@@ -1,0 +1,71 @@
+@import "./reset.css";
+
+input{
+    display: block;
+}
+
+textarea{
+    display: block;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #EDEDED;
+}
+
+.container{
+    max-width: 1160px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.navigation{
+    color: #04082C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.navigation h1{
+    font-size: 36px;
+    font-weight: 600;
+ }
+
+ .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ }
+
+ .card{
+    width: 300px;
+    height: 400px;
+    background-color: #c2c2c2;
+    margin-right: 50px;
+    margin-top:50px;
+    border-radius: 10px;
+    text-align: center;
+ }
+
+ .card h1{
+    font-size: 24px;
+    font-weight: 600;
+    padding-top: 25px;
+ }
+
+ .card p{
+    padding-top: 25px;
+ }
+
+ .btn_sub{
+    display: inline-block;
+    margin-top: 100px;
+    background-color: #04082C;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+ }

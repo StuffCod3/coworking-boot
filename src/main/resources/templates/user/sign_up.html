@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+
+    <link rel="stylesheet" href="/assets/css/signUp.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <section class="registration">
+        <div class="content">
+            <div class="left-block">
+                <div class="text">
+                    <h1>Добро пожаловать</h1>
+                    <p>Зарегистрируйтесь в личном кабинете резидента и используйте возможности
+                        пространства на полную!</p>
+                </div>
+            </div>
+            <div class="right-block">
+                <div class="elements">
+                    <div class="text-over-form">
+                        <h1>Регистрация</h1>
+                        <p>Укажите Ваши данные для регистрации в системе</p>
+                    </div>
+                    
+                    <div class="form-block-reg">
+                        <form th:method="POST" th:action="@{/sign_up}" th:object="${usr}">
+                            <input th:field="*{name}" class="reg_input" type="text" placeholder="ФИО" />
+                            <input th:field="*{email}" class="reg_input" type="email" placeholder="Email" />
+                            <input th:field="*{phone}" class="reg_input" type="text" placeholder="Телефон" />
+                            <input th:field="*{password}" class="reg_input" type="password" placeholder="Пароль" />
+                            <input class="btn_reg" type="submit" value="Регистрация"/>
+                        </form>
+                    </div>
+
+                    <a href="/sign_in" class="sign-in-page">Есть аккаунт</a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>

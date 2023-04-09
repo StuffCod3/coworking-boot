@@ -1,0 +1,179 @@
+@import "./reset.css";
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #EDEDED;
+}
+
+.container{
+    max-width: 1160px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.navigation{
+    color: #04082C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.navigation h1{
+   font-size: 36px;
+   font-weight: 600;
+}
+
+.navigation a{
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+ }
+
+ .block-profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+ }
+
+ .block-elements{
+    width: 1000px;
+    height: 600px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .left-half{
+    width: 400px;
+ }
+
+ .right-half{
+    width: 600px;
+    height: 600px;
+    align-items: center;
+    display: flex;
+ }
+
+ .name{
+    padding: 50px;
+    font-size: 36px;
+ }
+
+ .info-profile{
+    padding-left: 50px;
+    display: flex;
+    justify-content: start;
+ }
+
+ .avatar{
+    width: 150px;
+    height: 150px;
+    background-color: #EDEDED;
+ }
+
+ .text-info{
+    padding-left: 24px;
+    color: #B6B6B6;
+ }
+
+ .text-info p{
+    padding-bottom: 8px;
+ }
+
+ .guests{
+    padding-left: 50px;
+    margin-bottom: 36px;
+ }
+
+
+ .guests h1{
+    font-size: 24px;
+    padding-bottom: 16px;
+ }
+
+ .guests a{
+    background-color: #ECECEC;
+    padding: 15px 100px 15px 15px;
+    border-radius: 10px;
+    transition: .3s;
+    color: black;
+ }
+
+ .guests a:hover{
+    background-color: #383838;
+    color: white;
+ }
+
+ .settings{
+    padding-left: 50px;
+    margin-bottom: 36px;
+ }
+
+
+ .settings h1{
+    font-size: 24px;
+    padding-bottom: 16px;
+ }
+
+ .settings a{
+    background-color: #ECECEC;
+    padding: 15px 160px 15px 15px;
+    border-radius: 10px;
+    transition: .3s;
+    color: black;
+ }
+
+ .settings a:hover{
+    background-color: #383838;
+    color: white;
+ }
+
+ .support{
+    padding-left: 50px;
+    margin-bottom: 36px;
+ }
+
+
+ .support h1{
+    font-size: 24px;
+    padding-bottom: 16px;
+ }
+
+ .support a{
+    background-color: #ECECEC;
+    padding: 15px 70px 15px 15px;
+    border-radius: 10px;
+    transition: .3s;
+    color: black;
+ }
+
+ .support a:hover{
+    background-color: #383838;
+    color: white;
+ }
+
+ .tarifs{
+    padding-left: 50px;
+    margin-bottom: 36px;
+ }
+
+
+ .tarifs h1{
+    font-size: 24px;
+    padding-bottom: 16px;
+ }
+
+ .tarifs a{
+    background-color: #ECECEC;
+    padding: 15px 70px 15px 15px;
+    border-radius: 10px;
+    transition: .3s;
+    color: black;
+ }
+
+ .tarifs a:hover{
+    background-color: #383838;
+    color: white;
+ }
