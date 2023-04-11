@@ -3,6 +3,7 @@ package ru.stuff.coworking.controllers.pages.user;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -59,7 +60,20 @@ public class MainController{
     }
 
     @GetMapping("/profile/settings/editPass")
-    public String editPass(){
+    public String editPass(Model model){
+        model.addAttribute("user", new UserModel());
+        return "user/edit_pass";
+    }
+
+    @PostMapping("/profile/settings/editPass")
+    public String editPassPost(@AuthenticationPrincipal CustomUserDetails customUserDetails, @ModelAttribute("user") UserModel model){
+        String email = customUserDetails.getUsername();
+        Optional<UserModel> userModel = userServices.searchByEmail(email);
+
+        UserModel user = userModel.get();
+        String newPass = model.getPassword();
+        user.setPassword(newPass);
+        userServices.updatePassUser(user);
         return "user/edit_pass";
     }
 

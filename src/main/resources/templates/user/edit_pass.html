@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,10 +28,10 @@
 
                 <div class="content-pass">
                     <div class="form-edit">
-                        <form class="edit" action="">
+                        <form class="edit" th:method="POST" th:action="@{/profile/settings/editPass}" th:object="${user}">
                             <input class="email-edit" type="password" placeholder="Старый пароль" />
                             <input class="phone-edit" type="password" placeholder="Новый пароль" />
-                            <input class="phone-edit" type="password" placeholder="Подтвердите новый пароль" />
+                            <input th:field="*{password}" class="phone-edit" type="password" placeholder="Подтвердите новый пароль" />
                             <input class="btn_save" type="submit" value="Сохранить"/>
                         </form>
                     </div>

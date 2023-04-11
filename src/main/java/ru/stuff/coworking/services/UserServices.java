@@ -26,7 +26,8 @@ public class UserServices {
         userRepositories.save(userModel);
     }
 
-    public void updateUser(UserModel userModel){
+    public void updatePassUser(UserModel userModel){
+        userModel.setPassword(passwordEncoder.encode(userModel.getPassword()));
         userRepositories.save(userModel);
     }
 
