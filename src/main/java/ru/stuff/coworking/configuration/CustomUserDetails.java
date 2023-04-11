@@ -17,9 +17,11 @@ public class CustomUserDetails implements UserDetails {
     private String name;
     private String phone;
     private String password;
+    private int code;
     private List<GrantedAuthority> authorities;
 
     public CustomUserDetails(UserModel userModel) {
+        code = userModel.getCode();
         email = userModel.getEmail();
         password = userModel.getPassword();
         name = userModel.getName();
@@ -70,5 +72,9 @@ public class CustomUserDetails implements UserDetails {
 
     public String getPhone(){
         return phone;
+    }
+
+    public int getCode(){
+        return code;
     }
 }

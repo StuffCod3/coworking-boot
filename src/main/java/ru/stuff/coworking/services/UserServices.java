@@ -18,6 +18,9 @@ public class UserServices {
     private PasswordEncoder passwordEncoder;
 
     public void createUser(UserModel userModel){
+        Double d = Math.random() * (9999 - 1001) + 1001;
+        int code = d.intValue();
+        userModel.setCode(code);
         userModel.setDiscount(false);
         userModel.setCoffee(false);
         userModel.setCloset(false);

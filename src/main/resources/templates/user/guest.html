@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,8 +27,8 @@
             <div class="block-form">
                 <h1>Реферальный код</h1>
                 <div class="data">
-                    <p>Ваш промокод: 01_3243</p>
-                    <p>Активаций: 8</p>
+                    <p>Ваш промокод</p>
+                    <p sec:authentication="principal.code">Ваш промокод: 01_3243</p>
                 </div>
             </div>
         </div>
