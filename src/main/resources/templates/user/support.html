@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,9 +28,9 @@
 
                 <div class="content-sup">
                     <div class="form-edit">
-                        <form id="f" class="sup-form" action="">
-                            <input class="theme" type="text" placeholder="Тема" />
-                            <textarea class="quation" placeholder="Ваш вопрос"></textarea>
+                        <form id="f" class="sup-form" th:method="POST" th:action="@{/support}" th:object="${ticket}">
+                            <input th:field="*{title}" class="theme" type="text" placeholder="Тема" />
+                            <textarea th:field="*{question}" class="quation" placeholder="Ваш вопрос"></textarea>
                             <input class="btn_send_1" type="submit" value="Отправить"/>
                         </form>
                     </div>

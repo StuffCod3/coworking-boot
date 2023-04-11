@@ -12,12 +12,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import ru.stuff.coworking.configuration.CustomUserDetails;
 import ru.stuff.coworking.model.FreeDayModel;
+import ru.stuff.coworking.model.TicketsModel;
 import ru.stuff.coworking.model.UserModel;
 import ru.stuff.coworking.repositories.UserRepositories;
-import ru.stuff.coworking.services.FreeDayServices;
-import ru.stuff.coworking.services.PointsServices;
-import ru.stuff.coworking.services.RoomsServices;
-import ru.stuff.coworking.services.UserServices;
+import ru.stuff.coworking.services.*;
 
 import java.util.Optional;
 
@@ -29,6 +27,7 @@ public class MainController{
     private final RoomsServices roomsServices;
     private final UserServices userServices;
     private final FreeDayServices freeDayServices;
+    private final TicketServices ticketServices;
 
     @GetMapping("/")
     public String index(Model model){
@@ -87,8 +86,18 @@ public class MainController{
     }
 
     @GetMapping("/support")
-    public String support(){
+    public String support(Model model){
+        model.addAttribute("ticket", new TicketsModel());
         return "user/support";
+    }
+
+    @PostMapping("/support")
+    public String supportTicket(@AuthenticationPrincipal CustomUserDetails customUserDetails, @ModelAttribute("ticket") TicketsModel ticketsModel){
+        String email = customUserDetails.getUsername();
+        Optional<UserModel> userModel = userServices.searchByEmail(email);
+        ticketsModel.setEmail(userModel.get().getEmail());
+        ticketServices.createTicket(ticketsModel);
+        return "user/profile";
     }
 
     @GetMapping("/sign_in")
