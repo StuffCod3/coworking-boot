@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import ru.stuff.coworking.configuration.CustomUserDetails;
+import ru.stuff.coworking.model.FreeDayModel;
 import ru.stuff.coworking.model.UserModel;
 import ru.stuff.coworking.repositories.UserRepositories;
+import ru.stuff.coworking.services.FreeDayServices;
 import ru.stuff.coworking.services.PointsServices;
 import ru.stuff.coworking.services.RoomsServices;
 import ru.stuff.coworking.services.UserServices;
@@ -26,9 +28,11 @@ public class MainController{
     private final PointsServices pointsServices;
     private final RoomsServices roomsServices;
     private final UserServices userServices;
+    private final FreeDayServices freeDayServices;
 
     @GetMapping("/")
-    public String index(){
+    public String index(Model model){
+        model.addAttribute("free", new FreeDayModel());
         return "user/index";
     }
 
@@ -102,5 +106,11 @@ public class MainController{
     public String signUp(@ModelAttribute("usr") UserModel userModel){
         userServices.createUser(userModel);
         return "user/sign_in";
+    }
+
+    @PostMapping("/takeFree")
+    public String freeDayTake(@ModelAttribute("free") FreeDayModel freeDayModel){
+        freeDayServices.createDay(freeDayModel);
+        return "user/index";
     }
 }

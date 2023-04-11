@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -157,11 +157,11 @@
             </div>
         </div>
         <div class="form">
-            <form class="form-app" action="" method="">
-                <input class="app_input" type="text" placeholder="Ваше имя" />
-                <input class="app_input" type="phone" placeholder="Ваш телефон" />
-                <input class="app_input" type="email" placeholder="Ваше email" />
-                <input class="app_input" type="text" placeholder="Дата пробного дня" />
+            <form class="form-app" th:method="POST" th:action="@{/takeFree}" th:object="${free}">
+                <input th:field="*{name}" class="app_input" type="text" placeholder="Ваше имя" />
+                <input th:field="*{phone}" class="app_input" type="text" placeholder="Ваш телефон" />
+                <input th:field="*{email}" class="app_input" type="email" placeholder="Ваше email" />
+                <input th:field="*{date}" class="app_input" type="text" placeholder="Дата пробного дня" />
                 <input class="btn_send_app" type="submit" value="Отправить"/>
             </form>
         </div>
