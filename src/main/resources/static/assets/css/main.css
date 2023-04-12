@@ -257,6 +257,10 @@ body{
     font-size: 32px;
 }
 
+.c-s-d-p{
+    padding-bottom: 75px;
+}
+
 .content-sec-desc h1{
     padding-top: 64px;
     text-align: center;
