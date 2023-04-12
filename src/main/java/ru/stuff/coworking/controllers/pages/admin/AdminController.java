@@ -27,7 +27,7 @@ public class AdminController {
     @PostMapping("/admin/addPoint")
     public String createPoint(@ModelAttribute PointModel pointModel){
         pointsServices.savePoint(pointModel);
-        return "user/index";
+        return "redirect:/admin/addPoint";
     }
 
     @GetMapping("/admin/addRoom")
@@ -39,7 +39,7 @@ public class AdminController {
     @PostMapping("/admin/addRoom")
     public String createRoom(@ModelAttribute RoomModel roomModel){
         roomsServices.saveRoom(roomModel);
-        return "user/index";
+        return "redirect:/admin/addRoom";
     }
 
 }

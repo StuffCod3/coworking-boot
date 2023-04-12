@@ -7,13 +7,13 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import ru.stuff.coworking.configuration.CustomUserDetails;
-import ru.stuff.coworking.model.FreeDayModel;
-import ru.stuff.coworking.model.TicketsModel;
-import ru.stuff.coworking.model.UserModel;
+import ru.stuff.coworking.model.*;
 import ru.stuff.coworking.repositories.UserRepositories;
 import ru.stuff.coworking.services.*;
 
@@ -28,6 +28,7 @@ public class MainController{
     private final UserServices userServices;
     private final FreeDayServices freeDayServices;
     private final TicketServices ticketServices;
+    private final OfficeBookingService officeBookingService;
 
     @GetMapping("/")
     public String index(Model model){
@@ -45,6 +46,26 @@ public class MainController{
     public String offices(Model model){
         model.addAttribute("points", pointsServices.showPoints());
         return "user/offices";
+    }
+
+    @GetMapping("/offices/{id}")
+    public String officeById(@PathVariable("id") int id, ModelMap model){
+        model.addAttribute("point", pointsServices.showPointById(id));
+        model.addAttribute("booking", new OfficeBookingModel());
+        return "user/office";
+    }
+
+    @PostMapping("/offices/{id}")
+    public String bookingOffice(@AuthenticationPrincipal CustomUserDetails customUserDetails,
+                                OfficeBookingModel officeBookingModel, @PathVariable("id") int id){
+        String email = customUserDetails.getUsername();
+
+        PointModel pointModel = pointsServices.showPointById(id);
+
+        officeBookingModel.setEmail(email);
+        officeBookingModel.setPoint(pointModel.getTitle());
+        officeBookingService.createOfficeBooking(officeBookingModel);
+        return "redirect:/";
     }
 
     @GetMapping("/profile")

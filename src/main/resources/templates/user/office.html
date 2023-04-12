@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${point.title}">Title</title>
+</head>
+<body>
+    <p th:text="Забронировать + ' ' + ${point.title}"></p>
+    <form method="POST" th:action="@{/offices/{id}(id=${point.id})}" th:object="${points}">
+        <input type="submit" value="Забронировать">
+    </form>
+</body>
+</html>

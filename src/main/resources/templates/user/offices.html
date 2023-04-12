@@ -38,7 +38,11 @@
                         <p th:text="${point.description}"></p>
                         <p th:text="${point.city} + ' ' + ${point.address}"></p>
                         <p th:text="${point.price} + 'руб.'" class="price"> 999 руб/месяц</p>
-                        <button class="btn_booking">Забронировать</button>
+
+                        <a th:href="@{/offices/{id}(id=${point.id})}" class="btn_booking">Забронировать</a>
+<!--                        <form th:action="@{/offices/{id}(id=${point.id})}" th:method="post" th:object="${office}">-->
+<!--                            <input class="btn_booking" type="submit" value="Забронировать" />-->
+<!--                        </form>-->
                     </div>
                 </div>
             </div>
